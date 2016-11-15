@@ -1,5 +1,12 @@
 <div id="wrapper">
   <div class="overlay"></div>
-    {{partial 'navbar'}}
+  {{partial 'navbar'}}
+  <div id="page-content-wrapper">
+    <button type="button" onclick="expandMenu()" class="hamburger is-closed animated fadeInLeft">
+      <span class="hamb-top"></span>
+      <span class="hamb-middle"></span>
+      <span class="hamb-bottom"></span>
+    </button>
     {{outlet}}
+  </div>
 </div>

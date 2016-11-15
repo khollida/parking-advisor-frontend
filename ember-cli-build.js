@@ -9,6 +9,7 @@ module.exports = function(defaults) {
   //Import JS for sidebar
   app.import('vendor/index.js');
   app.import('bower_components/animate.css/animate.min.css');
+  app.import('bower_components/normalize-css/normalize.css');
   app.import('bower_components/components-font-awesome/css/font-awesome.min.css');
   app.import('bower_components/components-font-awesome/fonts/fontawesome-webfont.eot');
   app.import('bower_components/components-font-awesome/fonts/fontawesome-webfont.svg');

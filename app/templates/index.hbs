@@ -1,33 +1,24 @@
-
-<!-- Page Content -->
-<div id="page-content-wrapper">
-  <button type="button" onclick="expandMenu()" class="hamburger is-closed animated fadeInLeft">
-    <span class="hamb-top"></span>
-    <span class="hamb-middle"></span>
-    <span class="hamb-bottom"></span>
-  </button>
-
-    <div class="container">
-      <div class="text-center">
-        <h1>ParkingAdvisor<br><small><em>A parking analytics platform</em></small></h1>
+<div class="container">
+  <div class="text-center">
+    <h1>ParkingAdvisor
+      <br>
+      <small>
+        <em>A parking analytics platform</em>
+      </small>
+    </h1>
+  </div>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1">@</span>
+        <!-- <input type="text" class="form-control" placeholder="Enter Parking Space" aria-describedby="sizing-addon1"> -->
+        {{input type="text" value=location class="form-control" placeholder="Enter Parking Space" aria-describedby="sizing-addon1"}}
       </div>
-      <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-            <div class="input-group input-group-lg">
-              <span class="input-group-addon" id="sizing-addon1">@</span>
-              <!-- <input type="text" class="form-control" placeholder="Enter Parking Space" aria-describedby="sizing-addon1"> -->
-              {{input type="text" value=location class="form-control" placeholder="Enter Parking Space" aria-describedby="sizing-addon1"}}
-            </div>
-                        <br/>
-           <button type="button" {{action 'searchSpaces'}} class="btn btn-primary btn-lg btn-block">Locate Parking Space</button>
-           <p class="text-center">Currently limited to Shepherdstown and Morgantown, WV!</p>
-        </div>
-        <div class="col-md-3"></div>
-      </div>
+      <br/>
+      <button type="button" {{action 'searchSpaces'}} class="btn btn-primary btn-lg btn-block">Locate Parking Space</button>
+      <p class="text-center">Currently limited to Shepherdstown and Morgantown, WV!</p>
     </div>
-
+    <div class="col-md-3"></div>
+  </div>
 </div>
-
-
-<!-- /#page-content-wrapper -->
