@@ -1,0 +1,9 @@
+{
+  "name": "parking-advisor",
+  "dependencies": {
+    "ember": "~2.9.0",
+    "ember-cli-shims": "0.1.3",
+    "animate.css": "^3.5.2",
+    "components-font-awesome": "^4.7.0"
+  }
+}
