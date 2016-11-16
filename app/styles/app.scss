@@ -9,18 +9,31 @@ body {
 body,
 html {
   height: 100%;
-  background-color: #583e7e;
+  // background-color: #583e7e;
+  background: linear-gradient(135deg, #8363a1 0%, #74a8c3 100%);
+  background-image: linear-gradient(135deg, rgb(131, 99, 161) 0%, rgb(116, 168, 195) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-body,
-html {
-  background-color: #583e7e;
-}
+
 body h1,
 body h2,
 body h3,
-body h4 {
+body h4,
+body h5,
+body table {
   color: rgba(255, 255, 255, 0.9);
+  margin: 0;
 }
+.top-buffer { margin-top: 150px;}
+#maintitle {
+  margin-bottom: 4px;
+}
+#secondarytitle {
+  margin-bottom: 45px;
+}
+
+
 body p,
 body blockquote {
   color: rgba(255, 255, 255, 0.7);
