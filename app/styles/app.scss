@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import "_menu";
 @import "_flat-ui-min";
+@import "_footer";
 
 body {
   position: relative;
@@ -25,12 +26,19 @@ body table {
   color: rgba(255, 255, 255, 0.9);
   margin: 0;
 }
-.top-buffer { margin-top: 150px;}
+.top-buffer {
+  // margin-top: 150px;
+  padding-top: 150px
+}
 #maintitle {
   margin-bottom: 4px;
 }
 #secondarytitle {
   margin-bottom: 45px;
+}
+
+.level-content {
+  display:inline;
 }
 
 
