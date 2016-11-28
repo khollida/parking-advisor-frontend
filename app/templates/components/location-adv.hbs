@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"><h2>Detailed View</h2></div>
+    <div class="col-md-4"> <button type="button" {{ action 'switchView' }} class="btn btn-primary btn-lg view-chg">Simple View</button></div>
+    <div class="col-md-4"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">{{ember-chart type='line' height=300 data=chartbuild }}</div>
+    <!-- <div class="col-md-4">{{ember-chart type='radar' height=300 data=chartbuild }}</div>
+    <div class="col-md-4">{{ember-chart type='bar' height=300 data=chartbuild }}</div> -->
+  </div>
+</div>

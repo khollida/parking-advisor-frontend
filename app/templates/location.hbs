@@ -1,31 +1,9 @@
-<div class="container">
-  <div class="row top-buffer">
-    <div class="col-lg-8 col-lg-offset-2">
-      <!-- <h3 class="page-header">Tickets Issued</h3>
-      <table class="table table-hover">
-
-        {{#each model.citations as |ticket|}}
-        {{#each model.geo as |geo|}}
-          <tr>
-            <td>{{ticket._id}}</td>
-            <td>{{ticket.location}}</td>
-            <td>{{ticket.violation_date}}</td>
-            <td>{{ticket.type}}</td>
-            <td>{{ticket.amount}}</td>
-            <td>{{ geo.longitude }}</td>
-            <td>{{ geo.latitude }}</td>
-          </tr>
-        {{/each}}
-        {{/each}}
-      </table> -->
-      <div class="text-center">
-      {{#each model.citations as |ticket|}}
-      <h1>Meter <small>{{ticket._id}}</small></h1>
-      <h1><small>{{ticket.count}}</small> Citations</h1>
-      <h1>Total <small>${{ticket.totalAmount}}</small></h1>
-      {{/each}}
-      </div>
-
-    </div>
-  </div>
-</div>
+{{#if simpleview}}
+  {{#each model.citations as |ticket|}}
+    {{#location-simple meter=ticket._id ticketCount=ticket.count total=ticket.totalAmount onSwitch=(action "launchVisual") }}
+    {{/location-simple}}
+  {{/each}}
+{{else}}
+  {{#location-adv chartbuild=firstchart onSwitch=(action "launchSimple")}}
+  {{/location-adv}}
+{{/if}}
