@@ -17,6 +17,7 @@ module.exports = function(defaults) {
   app.import('bower_components/components-font-awesome/fonts/fontawesome-webfont.woff');
   app.import('bower_components/components-font-awesome/fonts/fontawesome-webfont.woff2');
   app.import('bower_components/components-font-awesome/fonts/FontAwesome.otf');
+  app.import('bower_components/jquery-knob/dist/jquery.knob.min.js');
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
