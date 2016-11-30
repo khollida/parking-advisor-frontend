@@ -4,6 +4,11 @@
     {{/location-simple}}
   {{/each}}
 {{else}}
-  {{#location-adv chartbuild=firstchart onSwitch=(action "launchSimple")}}
+  {{#each model.citations as |ticket|}}
+
+  {{#location-adv meter=ticket._id chartbuild=firstchart chartoptions=options totalamount=ticket.totalAmount avg=ticket.avgAmount monthlyCountChart=monthlyCountChart onSwitch=(action "launchSimple")}}
   {{/location-adv}}
+  {{/each}}
+
 {{/if}}
+<p>{{fixedAvg}}</p>

@@ -1,7 +1,8 @@
 @import "bootstrap";
-@import "_menu";
 @import "_flat-ui-min";
+@import "_menu";
 @import "_footer";
+@import "_dash";
 
 body {
   position: relative;
@@ -48,6 +49,9 @@ body table {
 }
 .view-chg {
   margin-top: 20px;
+}
+.second-option {
+  text-align: right;
 }
 
 body p,

@@ -1,12 +1,40 @@
 <div class="container">
-  <div class="row">
-    <div class="col-md-4"><h2>Detailed View</h2></div>
-    <div class="col-md-4"> <button type="button" {{ action 'switchView' }} class="btn btn-primary btn-lg view-chg">Simple View</button></div>
-    <div class="col-md-4"></div>
-  </div>
-  <div class="row">
-    <div class="col-md-4">{{ember-chart type='line' height=300 data=chartbuild }}</div>
-    <!-- <div class="col-md-4">{{ember-chart type='radar' height=300 data=chartbuild }}</div>
-    <div class="col-md-4">{{ember-chart type='bar' height=300 data=chartbuild }}</div> -->
-  </div>
+<div class="row adv-view">
+    <div class="col-md-12 main">
+        <h2 class="page-header">Meter <small>{{meter}} metrics</small></h2>
+
+        <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder">
+                {{loc-gauge who=totalamount}}
+                <h4>Total</h4>
+                <span class="text-muted">Amount</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+                {{loc-gauge-avg who=avg }}
+                <h4>Average</h4>
+                <span class="text-muted">Amount</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              {{loc-gauge who=1200}}
+                <h4>Label</h4>
+                <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              {{loc-gauge who=520}}
+                <h4>Label</h4>
+                <span class="text-muted">Something else</span>
+            </div>
+        </div>
+        <input type="checkbox" checked data-toggle="switch" name="default-switch" id="switch-01" />
+
+        <!-- <h2 class="page-header">Meter <small>{{meter}}</small></h2> -->
+
+        <!-- <h2 class="sub-header">Section title</h2> -->
+        <!-- <h2 class="page-header">Citations <small>Total Amount Monthly</small></h2>
+        {{ember-chart type='line' height=400 data=chartbuild options=chartoptions }}
+        <h2 class="page-header">Citations <small>Monthly</small></h2>
+        {{ember-chart type='line' height=400 data=monthlyCountChart options=chartoptions }} -->
+
+    </div>
+</div>
 </div>
