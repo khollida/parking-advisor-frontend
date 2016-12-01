@@ -6,7 +6,7 @@ export default Ember.Component.extend({
     Ember.$(function() {
     Ember.$(".dial").knob({
       'readOnly': true,
-      'max': 2000,
+      'max': 3000,
       'fgColor': '#1abc9c',
       // 'fgColor': 'rgba(236, 240, 241,1.0)',
       'inputColor': '#ecf0f1',
