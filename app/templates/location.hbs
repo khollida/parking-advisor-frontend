@@ -6,7 +6,7 @@
 {{else}}
   {{#each model.citations as |ticket|}}
 
-  {{#location-adv meter=ticket._id chartbuild=firstchart chartoptions=options totalamount=ticket.totalAmount avg=ticket.avgAmount monthlyCountChart=monthlyCountChart onSwitch=(action "launchSimple")}}
+  {{#location-adv meter=ticket._id chartbuild=firstchart chartoptions=options totalamount=ticket.totalAmount count=ticket.count avg=ticket.avgAmount max=ticket.maxAmount monthlyCountChart=monthlyCountChart onSwitch=(action "launchSimple")}}
   {{/location-adv}}
   {{/each}}
 

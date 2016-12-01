@@ -14,9 +14,25 @@
 }
 .main .page-header {
   margin-top: 0;
+  float: left;
+  text-align: left;
+  border-style: none;
+}
+.main .right-header {
+  float: right;
+  text-align: right;
   border-style: none;
 }
 
+.main .page-header-noline {
+  margin-top: 0;
+  border-style: none;
+  padding-bottom: 45px;
+}
+
+h3 .page-header-noline {
+  margin: 0;
+}
 
 .placeholders {
   margin-bottom: 30px;
@@ -31,4 +47,12 @@
 .placeholder .dial {
   display: inline-block;
   border-radius: 50%;
+}
+
+.adv-view {
+  padding-top: 30px;
+}
+
+.exit p {
+  margin-right: 40px;
 }

@@ -1,40 +1,62 @@
 <div class="container">
-<div class="row adv-view">
-    <div class="col-md-12 main">
-        <h2 class="page-header">Meter <small>{{meter}} metrics</small></h2>
+  <h1>Meter <small>{{meter}}</small>
+        <span class="btn-group">
+            <button class="btn btn-mini" {{ action 'switchView' }} >Simple View</button>
+            <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">New Location</a></li>
+            </ul>
+        </span>
+</h1>
 
-        <div class="row placeholders">
-            <div class="col-xs-6 col-sm-3 placeholder">
-                {{loc-gauge who=totalamount}}
-                <h4>Total</h4>
-                <span class="text-muted">Amount</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-                {{loc-gauge-avg who=avg }}
-                <h4>Average</h4>
-                <span class="text-muted">Amount</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              {{loc-gauge who=1200}}
-                <h4>Label</h4>
-                <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              {{loc-gauge who=520}}
-                <h4>Label</h4>
-                <span class="text-muted">Something else</span>
-            </div>
-        </div>
-        <input type="checkbox" checked data-toggle="switch" name="default-switch" id="switch-01" />
-
-        <!-- <h2 class="page-header">Meter <small>{{meter}}</small></h2> -->
-
-        <!-- <h2 class="sub-header">Section title</h2> -->
-        <!-- <h2 class="page-header">Citations <small>Total Amount Monthly</small></h2>
-        {{ember-chart type='line' height=400 data=chartbuild options=chartoptions }}
-        <h2 class="page-header">Citations <small>Monthly</small></h2>
-        {{ember-chart type='line' height=400 data=monthlyCountChart options=chartoptions }} -->
-
+  <div class="row adv-view">
+    <!-- <div class="col-md-12 main"> -->
+    <div class="row placeholders">
+      <div class="col-xs-6 col-sm-3 placeholder">
+        {{loc-gauge-total who=totalamount}}
+        <h4>Total</h4>
+        <span class="text-muted">Location Ticket Amount</span>
+      </div>
+      <div class="col-xs-6 col-sm-3 placeholder">
+        {{loc-gauge-avg who=avg }}
+        <h4>Average</h4>
+        <span class="text-muted">Ticket Amount</span>
+      </div>
+      <div class="col-xs-6 col-sm-3 placeholder">
+        {{loc-gauge who=max}}
+        <h4>Greatest</h4>
+        <span class="text-muted">Ticket Amount</span>
+      </div>
+      <div class="col-xs-6 col-sm-3 placeholder">
+        {{loc-gauge who=count}}
+        <h4>Tickets</h4>
+        <span class="text-muted">Issued</span>
+      </div>
     </div>
-</div>
+
+    <h3 class="page-header-noline">Tickets <small>Total Amount Monthly</small></h3> {{ember-chart type='line' height=400 data=chartbuild options=chartoptions }}
+    <h3 class="page-header-noline">Tickets <small>Issued Each Month</small></h3> {{ember-chart type='line' height=400 data=monthlyCountChart options=chartoptions }}
+
+    <!-- </div> -->
+    <!-- <div class="row">
+  <div class="col-md-4">
+    <h3><small>Heading</small></h3>
+    <p>Displays chart of total number of citations issued by month</p>
+    <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+  </div>
+  <div class="col-md-4">
+    <h3>Heading</h3>
+    <p>Displays chart of total number of citations issued by month</p>
+    <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+ </div>
+  <div class="col-md-4">
+    <h3>Heading</h3>
+    <p>Displays chart of total number of citations issued by month</p>
+    <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+  </div>
+</div> -->
+
+  </div>
 </div>
